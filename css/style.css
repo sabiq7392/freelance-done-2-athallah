@@ -1,0 +1,317 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2C786C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #004445;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f8f8;
+}
+
+main .kiri, main .kanan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+main .kiri {
+  z-index: 2;
+  background: #FAF5E4;
+  -webkit-animation: loading 1s cubic-bezier(0.86, 0.46, 0.83, 0.67);
+          animation: loading 1s cubic-bezier(0.86, 0.46, 0.83, 0.67);
+  -webkit-transition: -webkit-animation 0.2s;
+  transition: -webkit-animation 0.2s;
+  transition: animation 0.2s;
+  transition: animation 0.2s, -webkit-animation 0.2s;
+}
+
+main .kiri .shield {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+}
+
+main .kiri .gunung {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main .kanan {
+  z-index: 1;
+  background: white;
+}
+
+main .kanan .art, main .kanan .card-abu {
+  z-index: -1;
+  position: absolute;
+  right: -15px;
+}
+
+main .kanan .art {
+  top: 0;
+  width: 250px;
+}
+
+main .kanan .card-abu {
+  bottom: 0;
+}
+
+main .kanan form .container__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .kanan form .container__input .input__wrapper p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+main .kanan form .container__input .input__wrapper p a {
+  color: #F8B400;
+}
+
+main .kanan form .container__input .input__wrapper .cancel {
+  margin-top: 15px;
+  border: 1px solid #F8B400;
+  border-radius: 30px;
+  padding: 7px !important;
+  width: 300px;
+  color: #F8B400;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+main .kanan form .container__input .input__wrapper .cancel:hover {
+  color: black;
+  background: #F8B400 !important;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  font-weight: 600;
+}
+
+.main__page .profil__athallah {
+  max-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__page .profil__athallah figure {
+  height: 288px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__page .profil__athallah figure img.circle__orange {
+  position: absolute;
+}
+
+.main__page .profil__athallah figure img.itsme {
+  z-index: 1;
+  position: relative;
+  bottom: -64px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.1));
+}
+
+.main__page .profil__athallah header {
+  margin: auto;
+}
+
+.main__page .profil__athallah header h1 {
+  font-size: 48px;
+  letter-spacing: 0.15em !important;
+  line-height: 150%;
+}
+
+.main__page .profil__athallah article p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 150%;
+}
+
+footer {
+  margin-top: -1px;
+  background: #FEDC83;
+  font-size: 12px !important;
+}
+
+.bordered {
+  border: 1px solid red !important;
+}
+
+h1 {
+  font-weight: bold;
+  color: #F8B400;
+  font-size: 64px;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 36px;
+  color: #F8B400;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+h4 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-control:focus {
+  border-color: #F8B400;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.015) inset, 0 0 4px #F8B400;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.015) inset, 0 0 4px #F8B400;
+  outline: 0 none;
+}
+
+input {
+  font-size: 14px !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 30px !important;
+  margin-top: 15px;
+  border: none !important;
+  background: #EFEFEF !important;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 14px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+input:-ms-input-placeholder {
+  font-size: 14px;
+  transform: translateX(10px);
+}
+
+input::-ms-input-placeholder {
+  font-size: 14px;
+  transform: translateX(10px);
+}
+
+input::placeholder {
+  font-size: 14px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+input[type="submit"] {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: black;
+  background: #F8B400 !important;
+  font-weight: 600;
+}
+
+input[type="submit"]:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], input[type="submit"] {
+  height: 40px !important;
+  width: 300px;
+}
+
+.copyright {
+  width: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .kiri, .kanan {
+    height: 100vh !important;
+  }
+  h1 {
+    font-weight: bold;
+    color: #F8B400;
+    font-size: 55px;
+    letter-spacing: 0.05em;
+  }
+  h4 {
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    width: 100vw;
+  }
+  100% {
+    width: 57vw;
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 100vw;
+  }
+  100% {
+    width: 57vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,217 @@
+$primaryColor: #F8B400
+$background: #FAF5E4
+$lightColor: #FEDC83
+$darkColor: #898989
+$myshadow: 0px 4px 5px 0px rgba(0,0,0,0.10)
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+::-webkit-scrollbar 
+    width: 4px
+
+::-webkit-scrollbar-thumb 
+    background-color: #2C786C
+
+::-webkit-scrollbar-thumb:hover 
+    background: #004445
+::-webkit-scrollbar-track 
+    background: #f1f1f1
+
+html 
+    scroll-behavior: smooth
+
+body
+    font-family: 'Poppins', sans-serif
+    background: #f8f8f8
+
+
+// ============================= LOGIN
+main 
+    .kiri, .kanan
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100vh
+        position: relative
+
+    .kiri
+        z-index: 2
+        background: $background
+        animation: loading 1s cubic-bezier(.86,.46,.83,.67)
+        transition: animation 0.2s
+        .shield // ART
+            z-index: 1
+            position: absolute
+            top: 30px
+
+        .gunung
+            width: 100%
+            position: absolute
+            bottom: 0
+            left: 0
+            
+    
+    .kanan
+        z-index: 1
+        background: white
+        .art, .card-abu
+            z-index: -1
+            position: absolute
+            right: -15px
+        .art
+            top: 0
+            width: 250px
+
+        .card-abu
+            bottom: 0
+
+        form  .container__input 
+            display: flex
+            justify-content: center
+            align-items: center
+            .input__wrapper
+                p
+                    margin-top: 15px 
+                    font-size: 12px
+                    a
+                        color: $primaryColor
+
+                .cancel // Berada di halaman Registrasi
+                    margin-top: 15px 
+                    border: 1px solid $primaryColor
+                    border-radius: 30px 
+                    padding: 7px!important
+                    width: 300px
+                    color: $primaryColor
+                    transition: 0.2s
+                    font-size: 14px
+                    &:hover
+                        color: black
+                        background: $primaryColor!important
+                        filter: brightness(95%)
+                        box-shadow: $myshadow
+                        transform: translateY(-2px)
+                        font-weight: 600
+
+
+// // ============================= Main-Page
+.main__page 
+    .profil__athallah
+        max-width: 550px
+        display: flex
+        justify-content: center
+        flex-direction: column // biar nama athallah dibawah foto
+        figure
+            height: 288px
+            display: flex
+            justify-content: center
+            img.circle__orange
+                position: absolute
+
+            img.itsme
+                z-index: 1
+                position: relative
+                bottom: -64px
+                width: 200px
+                height: 200px
+                border-radius: 50% 
+                filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.1));
+
+        header 
+            margin: auto // biar nama ke tengah
+            h1 
+                font-size: 48px
+                letter-spacing: 0.15em!important
+                line-height: 150%
+        
+        article
+            p
+                color: rgba(0, 0, 0, 0.7)
+                font-size: 14px
+                line-height: 150%
+
+           
+// ============================= FOOTER                      
+footer
+    margin-top: -1px
+    background: $lightColor
+    font-size: 12px!important
+
+
+// ============================= SPAWN CLASS
+.bordered
+    border: 1px solid red!important
+h1
+    font-weight: bold
+    color: $primaryColor
+    font-size: 64px
+    letter-spacing: 0.05em
+
+h2
+    font-size: 36px
+    color: $primaryColor
+    font-weight: 600
+    letter-spacing: 0.05em
+    
+h4
+    color: rgba(0, 0, 0, 0.5)
+
+.form-control:focus 
+    border-color: $primaryColor
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.015) inset, 0 0 4px $primaryColor
+    outline: 0 none
+    
+input 
+    font-size: 14px!important
+    transition: 0.2s
+    border-radius:30px!important
+    margin-top: 15px
+    border: none!important
+    background: #EFEFEF!important
+    
+input::placeholder 
+    font-size: 14px
+    transform: translateX(10px)
+
+input[type="submit"] 
+    transition: 0.2s
+    color: black
+    background: $primaryColor!important
+    font-weight: 600
+    &:hover 
+        filter: brightness(95%)
+        box-shadow: $myshadow
+        transform: translateY(-2px)
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], input[type="submit"] 
+    height: 40px!important
+    width: 300px
+
+.copyright
+    width: 50px
+// ============================= Media Screen
+@media screen and (max-width:767px)
+    .kiri, .kanan
+        height: 100vh!important
+    h1
+        font-weight: bold
+        color: $primaryColor
+        font-size: 55px
+        letter-spacing: 0.05em
+
+    h4
+        font-size: 21px
+        color: rgba(0, 0, 0, 0.5)
+
+
+// ============================= Keyframes
+@keyframes loading
+    0%
+        width: 100vw
+        
+    100%
+        width: 57vw
+        
