@@ -2,7 +2,7 @@ $primaryColor: #F8B400
 $background: #FAF5E4
 $lightColor: #FEDC83
 $darkColor: #898989
-$myshadow: 0px 4px 5px 0px rgba(0,0,0,0.10)
+$myshadow: 0px 2px 2px 0px rgba(0,0,0,0.10)
 
 *
     padding: 0
@@ -17,6 +17,7 @@ $myshadow: 0px 4px 5px 0px rgba(0,0,0,0.10)
 
 ::-webkit-scrollbar-thumb:hover 
     background: #004445
+
 ::-webkit-scrollbar-track 
     background: #f1f1f1
 
@@ -25,10 +26,11 @@ html
 
 body
     font-family: 'Poppins', sans-serif
-    background: #f8f8f8
+    // background: #f8f8f8
 
 
-// ============================= LOGIN
+// ================================ Login Registrasi
+
 main 
     .kiri, .kanan
         display: flex
@@ -38,10 +40,10 @@ main
         position: relative
 
     .kiri
+        background-color: #FAF5E4
         z-index: 2
-        background: $background
         animation: loading 1s cubic-bezier(.86,.46,.83,.67)
-        transition: animation 0.2s
+        transition: animation 200ms
         .shield // ART
             z-index: 1
             position: absolute
@@ -52,11 +54,10 @@ main
             position: absolute
             bottom: 0
             left: 0
-            
-    
+
+
     .kanan
         z-index: 1
-        background: white
         .art, .card-abu
             z-index: -1
             position: absolute
@@ -86,7 +87,7 @@ main
                     padding: 7px!important
                     width: 300px
                     color: $primaryColor
-                    transition: 0.2s
+                    transition: 200ms
                     font-size: 14px
                     &:hover
                         color: black
@@ -96,9 +97,40 @@ main
                         transform: translateY(-2px)
                         font-weight: 600
 
+                .password // Input Password With Show Hide Password
+                    display: flex
+                    align-items: center
+                    label 
+                        font-size: 12px
 
-// // ============================= Main-Page
+                    .checkbox
+                        input[type="checkbox"]
+                            transform: translateY(3px) translateX(-30px)
+                            opacity: 0 // agar checkbox ilang tidak keliatan tapi tetep berfungsi seakan mata yang kita klik
+                            z-index: 1 // checkbox berada diatas mata dan bisa di klik
+                            position: relative
+
+                        #mata, #buta
+                            position: absolute
+                            z-index: 0 
+                            transition: 200ms
+                        #mata
+                            opacity: 1
+                            transform: translateY(17px) translateX(-45px)
+                                            
+                        #buta
+                            opacity: 0
+                            transform: translateY(-18px) translateX(-34px)
+
+// ================================ Main-Page
 .main__page 
+    form
+        input[value="Logout"]
+            z-index: 2!important
+            background: #F9F1D8!important
+            &:hover
+                background: $primaryColor!important
+
     .profil__athallah
         max-width: 550px
         display: flex
@@ -108,40 +140,134 @@ main
             height: 288px
             display: flex
             justify-content: center
-            img.circle__orange
+            .circle
+                clip-path: circle(50.2% at 50% 0)
+                z-index: 1
+                transition: 200ms
+                background: $primaryColor
+                height: 288px
+                width: 750px
                 position: absolute
-
+                
+            
+            // .circle-logout
+            //     clip-path: circle(50% at 100% 0)
+            //     z-index: 0
+            //     height: 500px
+            //     width: 250px
+            //     background: #F9F1D8
+            //     position: absolute
+            //     top: 0
+            //     right: 0
+                
             img.itsme
+                // align-self: flex-end
                 z-index: 1
                 position: relative
-                bottom: -64px
+                bottom: -57px
                 width: 200px
                 height: 200px
                 border-radius: 50% 
-                filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.1));
+                filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.1))
 
         header 
             margin: auto // biar nama ke tengah
             h1 
                 font-size: 48px
-                letter-spacing: 0.15em!important
-                line-height: 150%
+                letter-spacing: 0.15em
         
         article
             p
+                margin-bottom: 45px 
                 color: rgba(0, 0, 0, 0.7)
                 font-size: 14px
                 line-height: 150%
 
+            .col-sm-12
+                padding: 0 5px!important //untuk mengatur si card agar jarak tidak terlalu besar
+
+            .card
+                border: none!important
+                display: grid
+                place-items: center
+                width: 100%
+                margin: 0
+                margin-bottom: 30px
+                height: 167px
+                transition: 0.2s
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
+                &:hover
+                    transform: translateY(-5px)  
+                    background: $primaryColor       
+                    i
+                        color: white           
+
+                i
+                    transition: 200ms
+                    color: $primaryColor
+                    font-size: 50px
            
-// ============================= FOOTER                      
+
+// ================================ FOOTER                      
 footer
     margin-top: -1px
     background: $lightColor
     font-size: 12px!important
+    .copyright
+        width: 50px
 
 
-// ============================= SPAWN CLASS
+// ================================ Halaman Success
+main.sucess
+    height: 100vh
+    border: 1px solid red
+    display: flex
+    justify-content: center
+    align-items: center
+    section 
+        position: relative
+        top: -70px 
+        display: grid
+        place-items: center
+        header
+            h1 
+                color: #000
+                font-size: 48px
+                font-weight: 600
+                span
+                    font-weight: bold
+                    color: #2C786C
+            
+        a
+            background: $primaryColor
+            font-size: 14px
+            width: 250px
+            padding: 13.38px 0
+            margin-top: 30px
+            font-weight: 600
+            transition: 200ms
+            &:hover
+                filter: brightness(95%)
+                box-shadow: $myshadow
+                transform: translateY(-2px)
+
+            
+    .gunung
+        position: absolute
+        width: 70%
+        bottom: 0
+
+
+// ================================ SPAWN CLASS
+
+.background__kanan
+    background-image: url(/img/Kanan.svg)
+    background-size: cover 
+    background-repeat: no-repeat
+
+.changeBG
+    background: red
+
 .bordered
     border: 1px solid red!important
 h1
@@ -150,7 +276,7 @@ h1
     font-size: 64px
     letter-spacing: 0.05em
 
-h2
+h2, legend
     font-size: 36px
     color: $primaryColor
     font-weight: 600
@@ -166,36 +292,63 @@ h4
     
 input 
     font-size: 14px!important
-    transition: 0.2s
+    transition: 200ms
     border-radius:30px!important
     margin-top: 15px
     border: none!important
     background: #EFEFEF!important
-    
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], input[type="submit"] 
+    height: 40px!important
+    width: 300px
+   
 input::placeholder 
     font-size: 14px
-    transform: translateX(10px)
+    transform: translateX(5px)
 
 input[type="submit"] 
-    transition: 0.2s
+    transition: 200ms
     color: black
     background: $primaryColor!important
-    font-weight: 600
+    font-weight: 500
     &:hover 
         filter: brightness(95%)
         box-shadow: $myshadow
         transform: translateY(-2px)
 
-input[type="text"], input[type="number"], input[type="email"], input[type="password"], input[type="submit"] 
-    height: 40px!important
-    width: 300px
+input[value="Logout"] 
+    position: absolute
+    right: 15px
+    background: none!important
+    border: 1px solid $primaryColor!important
+    color: $primaryColor!important
+    width: 100px
+    &:hover 
+        background: $primaryColor!important
+        color: black!important
 
-.copyright
-    width: 50px
+
 // ============================= Media Screen
 @media screen and (max-width:767px)
     .kiri, .kanan
         height: 100vh!important
+    
+    .main__page .profil__athallah
+        figure
+            .circle
+                clip-path: circle( 140px at 50% 50%)
+                width: 100%
+
+            img.itsme
+                align-self: center!important // biar  gambar ke tengah vh
+                bottom: 0!important
+            
+        article
+            .col-sm-12:nth-of-type(2)
+                margin: 15px 0!important
+            .card
+                width: 100%!important
+
     h1
         font-weight: bold
         color: $primaryColor
@@ -205,6 +358,21 @@ input[type="text"], input[type="number"], input[type="email"], input[type="passw
     h4
         font-size: 21px
         color: rgba(0, 0, 0, 0.5)
+
+    main.sucess 
+        section 
+            header 
+                h1
+                    text-align: center
+                    font-size: 35px
+
+            figure
+                img
+                    width: 100px
+            
+                
+                    
+        
 
 
 // ============================= Keyframes

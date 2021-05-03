@@ -11,42 +11,55 @@
 
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/40613f3d16.js" crossorigin="anonymous"></script>
 
         <title>Jidan Atthala</title>
     </head>
     <body>
         <main class="container-fluid main">
-                <section class="row">
-                    <div class="col-lg-7" style="background-color: #FAF5E4;">
-                        <article class="kiri">
-                            <img src="/img/shield.svg" alt="" class="shield">
-                            <header class="text-center">
-                                <h1>ATHALLAH</h1>
-                                <h4>Let's get to know each others</h4>
-                            </header>
-                            <img src="/img/Gunung.svg" alt="" class="gunung">
-                        </article>
-                    </div>
-                    <div class="col-lg-5" style="background-color: white;">
-                        <article class="kanan">
-                            <figure>
-                                <img src="/img/Art-stick.svg " alt="" class="art">
-                                <img src="/img/Card-Abu.svg" alt="" class="card-abu">
-                            </figure>
-                            <form class="form-horizontal mt-5" method="POST" action="main-page.html">
-                                <h2 class="text-center">Welcome</h2>
-                                <section class="container__input">
-                                    <article class="input__wrapper">
-                                        <input type="text" class="form-control" placeholder="Username">
-                                        <input type="password" class="form-control " placeholder="Password">
-                                        <input type="submit" class="form-control kirim" value="Sign Up">
-                                        <p>don't have account? <a href="regist.html">Sign Up</a></p>
-                                    </article> <!-- input-wrapper -->
-                                </section> <!-- container__input -->
-                            </form>
-                        </article>
-                    </div>
-                </section>
+            <section class="row">
+                <div class="col-lg-7" style="background-color: #FAF5E4">
+                    <article class="kiri">
+                        <img src="/img/shield.svg" alt="" class="shield">
+                        <header class="text-center">
+                            <h1>ATHALLAH</h1>
+                            <h4>Let's get to know each others</h4>
+                        </header>
+                        <img src="/img/Gunung.svg" alt="" class="gunung">
+                    </article>
+                </div> <!-- Col -->
+
+                <div class="col-lg-5 background__kanan">
+                    <article class="kanan" >
+                        <!-- <figure>
+                            <img src="/img/Art-stick.svg " alt="" class="art">
+                            <img src="/img/Card-Abu.svg" alt="" class="card-abu">
+                        </figure> -->
+
+                        <form class="form-horizontal mt-5" method="POST" action="main-page.html">
+                            <legend class="text-center">Welcome</legend>
+
+                            <section class="container__input">
+                                <article class="input__wrapper">
+
+                                    <input type="text" class="form-control" placeholder="Username">
+                                    <div class="password"> <!-- Show Hide Password -->
+                                        <input type="password" class="form-control" id="password" placeholder="Password">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="show">
+                                            <i class="fas fa-eye" id="mata"></i> 
+                                            <i class="fas fa-eye-slash" id="buta"></i>
+                                        </div> <!-- Checkbox -->
+                                    </div> <!-- Show Hide -->
+                                    <input type="submit" class="form-control kirim" value="Sign Up">
+                                    <p>don't have account? <a href="regist.html">Sign Up</a></p>
+
+                                </article> <!-- Input Wrapper -->
+                            </section> <!-- Container Input -->
+                        </form>
+                    </article>
+                </div> <!-- Col -->
+            </section> <!-- Row -->
         </main>
         
         <footer class="">
@@ -57,5 +70,6 @@
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

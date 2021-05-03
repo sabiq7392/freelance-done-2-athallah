@@ -27,7 +27,6 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8f8f8;
 }
 
 main .kiri, main .kanan {
@@ -45,14 +44,14 @@ main .kiri, main .kanan {
 }
 
 main .kiri {
+  background-color: #FAF5E4;
   z-index: 2;
-  background: #FAF5E4;
   -webkit-animation: loading 1s cubic-bezier(0.86, 0.46, 0.83, 0.67);
           animation: loading 1s cubic-bezier(0.86, 0.46, 0.83, 0.67);
-  -webkit-transition: -webkit-animation 0.2s;
-  transition: -webkit-animation 0.2s;
-  transition: animation 0.2s;
-  transition: animation 0.2s, -webkit-animation 0.2s;
+  -webkit-transition: -webkit-animation 200ms;
+  transition: -webkit-animation 200ms;
+  transition: animation 200ms;
+  transition: animation 200ms, -webkit-animation 200ms;
 }
 
 main .kiri .shield {
@@ -70,7 +69,6 @@ main .kiri .gunung {
 
 main .kanan {
   z-index: 1;
-  background: white;
 }
 
 main .kanan .art, main .kanan .card-abu {
@@ -116,8 +114,8 @@ main .kanan form .container__input .input__wrapper .cancel {
   padding: 7px !important;
   width: 300px;
   color: #F8B400;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 200ms;
+  transition: 200ms;
   font-size: 14px;
 }
 
@@ -126,11 +124,60 @@ main .kanan form .container__input .input__wrapper .cancel:hover {
   background: #F8B400 !important;
   -webkit-filter: brightness(95%);
           filter: brightness(95%);
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   font-weight: 600;
+}
+
+main .kanan form .container__input .input__wrapper .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .kanan form .container__input .input__wrapper .password label {
+  font-size: 12px;
+}
+
+main .kanan form .container__input .input__wrapper .password .checkbox input[type="checkbox"] {
+  -webkit-transform: translateY(3px) translateX(-30px);
+          transform: translateY(3px) translateX(-30px);
+  opacity: 0;
+  z-index: 1;
+  position: relative;
+}
+
+main .kanan form .container__input .input__wrapper .password .checkbox #mata, main .kanan form .container__input .input__wrapper .password .checkbox #buta {
+  position: absolute;
+  z-index: 0;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+main .kanan form .container__input .input__wrapper .password .checkbox #mata {
+  opacity: 1;
+  -webkit-transform: translateY(17px) translateX(-45px);
+          transform: translateY(17px) translateX(-45px);
+}
+
+main .kanan form .container__input .input__wrapper .password .checkbox #buta {
+  opacity: 0;
+  -webkit-transform: translateY(-18px) translateX(-34px);
+          transform: translateY(-18px) translateX(-34px);
+}
+
+.main__page form input[value="Logout"] {
+  z-index: 2 !important;
+  background: #F9F1D8 !important;
+}
+
+.main__page form input[value="Logout"]:hover {
+  background: #F8B400 !important;
 }
 
 .main__page .profil__athallah {
@@ -157,14 +204,22 @@ main .kanan form .container__input .input__wrapper .cancel:hover {
           justify-content: center;
 }
 
-.main__page .profil__athallah figure img.circle__orange {
+.main__page .profil__athallah figure .circle {
+  -webkit-clip-path: circle(50.2% at 50% 0);
+          clip-path: circle(50.2% at 50% 0);
+  z-index: 1;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  background: #F8B400;
+  height: 288px;
+  width: 750px;
   position: absolute;
 }
 
 .main__page .profil__athallah figure img.itsme {
   z-index: 1;
   position: relative;
-  bottom: -64px;
+  bottom: -57px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -178,20 +233,129 @@ main .kanan form .container__input .input__wrapper .cancel:hover {
 
 .main__page .profil__athallah header h1 {
   font-size: 48px;
-  letter-spacing: 0.15em !important;
-  line-height: 150%;
+  letter-spacing: 0.15em;
 }
 
 .main__page .profil__athallah article p {
+  margin-bottom: 45px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
   line-height: 150%;
+}
+
+.main__page .profil__athallah article .col-sm-12 {
+  padding: 0 5px !important;
+}
+
+.main__page .profil__athallah article .card {
+  border: none !important;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  height: 167px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.main__page .profil__athallah article .card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  background: #F8B400;
+}
+
+.main__page .profil__athallah article .card:hover i {
+  color: white;
+}
+
+.main__page .profil__athallah article .card i {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  color: #F8B400;
+  font-size: 50px;
 }
 
 footer {
   margin-top: -1px;
   background: #FEDC83;
   font-size: 12px !important;
+}
+
+footer .copyright {
+  width: 50px;
+}
+
+main.sucess {
+  height: 100vh;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.sucess section {
+  position: relative;
+  top: -70px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main.sucess section header h1 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+main.sucess section header h1 span {
+  font-weight: bold;
+  color: #2C786C;
+}
+
+main.sucess section a {
+  background: #F8B400;
+  font-size: 14px;
+  width: 250px;
+  padding: 13.38px 0;
+  margin-top: 30px;
+  font-weight: 600;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+main.sucess section a:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+main.sucess .gunung {
+  position: absolute;
+  width: 70%;
+  bottom: 0;
+}
+
+.background__kanan {
+  background-image: url(/img/Kanan.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.changeBG {
+  background: red;
 }
 
 .bordered {
@@ -205,7 +369,7 @@ h1 {
   letter-spacing: 0.05em;
 }
 
-h2 {
+h2, legend {
   font-size: 36px;
   color: #F8B400;
   font-weight: 600;
@@ -225,51 +389,12 @@ h4 {
 
 input {
   font-size: 14px !important;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 200ms;
+  transition: 200ms;
   border-radius: 30px !important;
   margin-top: 15px;
   border: none !important;
   background: #EFEFEF !important;
-}
-
-input::-webkit-input-placeholder {
-  font-size: 14px;
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
-}
-
-input:-ms-input-placeholder {
-  font-size: 14px;
-  transform: translateX(10px);
-}
-
-input::-ms-input-placeholder {
-  font-size: 14px;
-  transform: translateX(10px);
-}
-
-input::placeholder {
-  font-size: 14px;
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
-}
-
-input[type="submit"] {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  color: black;
-  background: #F8B400 !important;
-  font-weight: 600;
-}
-
-input[type="submit"]:hover {
-  -webkit-filter: brightness(95%);
-          filter: brightness(95%);
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
 }
 
 input[type="text"], input[type="number"], input[type="email"], input[type="password"], input[type="submit"] {
@@ -277,13 +402,79 @@ input[type="text"], input[type="number"], input[type="email"], input[type="passw
   width: 300px;
 }
 
-.copyright {
-  width: 50px;
+input::-webkit-input-placeholder {
+  font-size: 14px;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+input:-ms-input-placeholder {
+  font-size: 14px;
+  transform: translateX(5px);
+}
+
+input::-ms-input-placeholder {
+  font-size: 14px;
+  transform: translateX(5px);
+}
+
+input::placeholder {
+  font-size: 14px;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+input[type="submit"] {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  color: black;
+  background: #F8B400 !important;
+  font-weight: 500;
+}
+
+input[type="submit"]:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+input[value="Logout"] {
+  position: absolute;
+  right: 15px;
+  background: none !important;
+  border: 1px solid #F8B400 !important;
+  color: #F8B400 !important;
+  width: 100px;
+}
+
+input[value="Logout"]:hover {
+  background: #F8B400 !important;
+  color: black !important;
 }
 
 @media screen and (max-width: 767px) {
   .kiri, .kanan {
     height: 100vh !important;
+  }
+  .main__page .profil__athallah figure .circle {
+    -webkit-clip-path: circle(140px at 50% 50%);
+            clip-path: circle(140px at 50% 50%);
+    width: 100%;
+  }
+  .main__page .profil__athallah figure img.itsme {
+    -ms-flex-item-align: center !important;
+        -ms-grid-row-align: center !important;
+        align-self: center !important;
+    bottom: 0 !important;
+  }
+  .main__page .profil__athallah article .col-sm-12:nth-of-type(2) {
+    margin: 15px 0 !important;
+  }
+  .main__page .profil__athallah article .card {
+    width: 100% !important;
   }
   h1 {
     font-weight: bold;
@@ -294,6 +485,13 @@ input[type="text"], input[type="number"], input[type="email"], input[type="passw
   h4 {
     font-size: 21px;
     color: rgba(0, 0, 0, 0.5);
+  }
+  main.sucess section header h1 {
+    text-align: center;
+    font-size: 35px;
+  }
+  main.sucess section figure img {
+    width: 100px;
   }
 }
 
