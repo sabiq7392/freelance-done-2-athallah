@@ -453,12 +453,12 @@ input[value="Logout"]:hover {
   .kiri, .kanan {
     height: 100vh !important;
   }
-  .main__page .profil__athallah figure .circle {
+  .main__page .profil__athallah .photo-profil .circle {
     -webkit-clip-path: circle(140px at 50% 50%);
             clip-path: circle(140px at 50% 50%);
     width: 100%;
   }
-  .main__page .profil__athallah figure img.itsme {
+  .main__page .profil__athallah .photo-profil img.itsme {
     -ms-flex-item-align: center !important;
         -ms-grid-row-align: center !important;
         align-self: center !important;
@@ -480,11 +480,11 @@ input[value="Logout"]:hover {
     font-size: 21px;
     color: rgba(0, 0, 0, 0.5);
   }
-  main.sucess section header h1 {
+  main.sucess div header h1 {
     text-align: center;
     font-size: 35px;
   }
-  main.sucess section figure img {
+  main.sucess div img {
     width: 100px;
   }
 }
