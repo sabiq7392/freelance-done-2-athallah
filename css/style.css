@@ -161,8 +161,8 @@ main .kanan form .container__input .input__wrapper .password .checkbox #mata, ma
 
 main .kanan form .container__input .input__wrapper .password .checkbox #mata {
   opacity: 1;
-  -webkit-transform: translateY(17px) translateX(-45px);
-          transform: translateY(17px) translateX(-45px);
+  -webkit-transform: translateY(17px) translateX(-46px);
+          transform: translateY(17px) translateX(-46px);
 }
 
 main .kanan form .container__input .input__wrapper .password .checkbox #buta {
@@ -194,7 +194,7 @@ main .kanan form .container__input .input__wrapper .password .checkbox #buta {
           flex-direction: column;
 }
 
-.main__page .profil__athallah figure {
+.main__page .profil__athallah .photo-profil {
   height: 288px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,7 +204,7 @@ main .kanan form .container__input .input__wrapper .password .checkbox #buta {
           justify-content: center;
 }
 
-.main__page .profil__athallah figure .circle {
+.main__page .profil__athallah .photo-profil .circle {
   -webkit-clip-path: circle(50.2% at 50% 0);
           clip-path: circle(50.2% at 50% 0);
   z-index: 1;
@@ -216,7 +216,7 @@ main .kanan form .container__input .input__wrapper .password .checkbox #buta {
   position: absolute;
 }
 
-.main__page .profil__athallah figure img.itsme {
+.main__page .profil__athallah .photo-profil img.itsme {
   z-index: 1;
   position: relative;
   bottom: -57px;
@@ -303,7 +303,7 @@ main.sucess {
           align-items: center;
 }
 
-main.sucess section {
+main.sucess div {
   position: relative;
   top: -70px;
   display: -ms-grid;
@@ -311,18 +311,18 @@ main.sucess section {
   place-items: center;
 }
 
-main.sucess section header h1 {
+main.sucess div header h1 {
   color: #000;
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-main.sucess section header h1 span {
+main.sucess div header h1 span {
   font-weight: bold;
   color: #2C786C;
 }
 
-main.sucess section a {
+main.sucess div a {
   background: #F8B400;
   font-size: 14px;
   width: 250px;
@@ -333,7 +333,7 @@ main.sucess section a {
   transition: 200ms;
 }
 
-main.sucess section a:hover {
+main.sucess div a:hover {
   -webkit-filter: brightness(95%);
           filter: brightness(95%);
   -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
@@ -346,12 +346,6 @@ main.sucess .gunung {
   position: absolute;
   width: 70%;
   bottom: 0;
-}
-
-.background__kanan {
-  background-image: url(/img/Kanan.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .changeBG {
